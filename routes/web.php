@@ -28,5 +28,8 @@ Route::post('/login', [ControladorLogin::class, 'login']);
 Route::post('/sign-up', [ControladorRegistro::class, 'signup']);
 
 Route::get("/obtener-menu-sistema", [ControladorWeb::class, "obtenerMenu"]);
-Route::post("/cliente-nuevo", [ControladorCliente::class, "guardar"]);
 Route::post("/cambiar-clave", [ControladorUsuario::class, "cambiarClave"]);
+
+Route::get("/obtener-cliente", [ControladorCliente::class, "editar"]);
+Route::post("/cliente-nuevo", [ControladorCliente::class, "guardar"]);
+Route::get("/cargar-grilla-clientes", [ControladorCliente::class, "cargarGrilla"]);
